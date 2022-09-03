@@ -6,10 +6,10 @@
 //
 
 import UIKit
-
+import RealmSwift
 class ViewController: UIViewController {
     
-    var nummber: Int
+   let realm = try! Realm()
     
     @IBOutlet var Button1:UIButton!
 

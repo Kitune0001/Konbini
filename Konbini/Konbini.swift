@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Syouhin{
+class Syouhin: Object {
     
-    var name: String!
-    var kibun: Int!
-    var gazou: Data!
+    @objc dynamic var name: String = ""
+    @objc dynamic var kibun: Int = 0
+    @objc dynamic var gazou: Data!
+    
+  
 
 }

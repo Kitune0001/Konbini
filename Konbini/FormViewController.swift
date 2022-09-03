@@ -6,9 +6,10 @@
 //
 
 import UIKit
-
+import RealmSwift
 class FormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate{
     
+    let realm = try! Realm()
     
     var syouhinArray = [Syouhin]()
     @IBOutlet weak var imageView: UIImageView!
