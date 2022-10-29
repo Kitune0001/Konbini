@@ -11,15 +11,16 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let realm = try! Realm()
     
-    var syouhinArray = [Syouhin]()
+    let syouhin = Syouhin()
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textfild:UITextField!
-    var kibunnamber: Int! = 0
+    var kibunNumber: Int! = 0
     var selectdata: NSData? = nil
     @IBAction func save() {
-//        syouhinArray.name = UITextField.text
-        let syouhins = Syouhin(name: textfild.text!,kibun: kibunnamber,gazou: selectdata! as Data)
-        
+        //        syouhinArray.name = UITextField.text
+        syouhin.name = textfild.text
+        syouhin.kibun = kibunNumber
+        print(syouhin)
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func selectPicture(_ sender: UIButton) {
@@ -46,8 +47,18 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         textfild.delegate = self
         // Do any additional setup after loading the view.
     }
-    
-
+    @IBAction func first() {
+        kibunNumber = 1
+    }
+    @IBAction func second(){
+        kibunNumber = 2
+    }
+    @IBAction func third(){
+        kibunNumber = 3
+    }
+    @IBAction func fourth(){
+        kibunNumber = 4
+    }
     /*
     // MARK: - Navigation
 

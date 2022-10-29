@@ -10,7 +10,7 @@ import RealmSwift
 
 class Syouhin: Object {
     
-    @objc dynamic var name: String = ""
+    @objc dynamic var name: String!
     @objc dynamic var kibun: Int = 0
     @objc dynamic var gazou: Data!
     

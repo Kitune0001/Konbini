@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zgO-V1-NIt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zgO-V1-NIt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -65,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qHe-W8-LfY">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1378"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="1374"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-95-t53">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
@@ -75,28 +76,28 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyV-Kb-Ckq">
-                                                <rect key="frame" x="56" y="825" width="67" height="31"/>
+                                                <rect key="frame" x="34" y="823" width="111" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="お腹すいた"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P20-bT-NUd">
-                                                <rect key="frame" x="296" y="825" width="67" height="31"/>
+                                                <rect key="frame" x="266" y="823" width="128" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="軽く食べたい"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ4-sr-b19">
-                                                <rect key="frame" x="56" y="1177" width="67" height="31"/>
+                                                <rect key="frame" x="56" y="1177" width="157" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="アイス食べたい"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-hY-zVT">
-                                                <rect key="frame" x="296" y="1177" width="67" height="31"/>
+                                                <rect key="frame" x="283" y="1175" width="94" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="喉乾いた"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58e-Te-doL">
                                                 <rect key="frame" x="131" y="455" width="152" height="31"/>
@@ -108,7 +109,7 @@
                                                 </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2xr-Tp-ohZ">
-                                                <rect key="frame" x="131" y="199" width="152" height="34"/>
+                                                <rect key="frame" x="131" y="182" width="152" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -131,11 +132,15 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="7Jv-VS-QC3"/>
                             </scrollView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-OZ-pYt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="413" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="hSD-Cr-9tx">
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="3b2-Uy-OvV"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="3b2-Uy-OvV">
+                                            <connections>
+                                                <action selector="save" destination="9xp-mJ-dfV" id="WGd-cP-Eio"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -152,6 +157,7 @@
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="imageView" destination="wI8-pC-Gh9" id="tkF-7M-yt0"/>
+                        <outlet property="textfild" destination="2xr-Tp-ohZ" id="IWs-44-VOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCQ-yx-M4l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -231,7 +237,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zgO-V1-NIt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vn4-eJ-xve">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
