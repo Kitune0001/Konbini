@@ -21,7 +21,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         syouhin.name = textfild.text
         syouhin.kibun = kibunNumber
         print(syouhin)
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func selectPicture(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -49,15 +49,19 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     @IBAction func first() {
         kibunNumber = 1
+        print(kibunNumber)
     }
     @IBAction func second(){
         kibunNumber = 2
+        print(kibunNumber)
     }
     @IBAction func third(){
         kibunNumber = 3
+        print(kibunNumber)
     }
     @IBAction func fourth(){
         kibunNumber = 4
+        print(kibunNumber)
     }
     /*
     // MARK: - Navigation

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zgO-V1-NIt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zgO-V1-NIt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="939.13043478260875" y="65.625"/>
         </scene>
-        <!--Form View Controller-->
+        <!--Title-->
         <scene sceneID="tMj-RJ-2Ba">
             <objects>
                 <viewController id="9xp-mJ-dfV" customClass="FormViewController" customModule="Konbini" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,24 +80,36 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="お腹すいた"/>
+                                                <connections>
+                                                    <action selector="first" destination="9xp-mJ-dfV" eventType="touchDown" id="g4S-X3-3rP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P20-bT-NUd">
                                                 <rect key="frame" x="266" y="823" width="128" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="軽く食べたい"/>
+                                                <connections>
+                                                    <action selector="second" destination="9xp-mJ-dfV" eventType="touchDown" id="QXn-HQ-lb4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJ4-sr-b19">
-                                                <rect key="frame" x="56" y="1177" width="157" height="31"/>
+                                                <rect key="frame" x="53" y="1175" width="163" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="アイス食べたい"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="冷たいの食べたい"/>
+                                                <connections>
+                                                    <action selector="third" destination="9xp-mJ-dfV" eventType="touchDown" id="BtR-gY-VKX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuV-hY-zVT">
                                                 <rect key="frame" x="283" y="1175" width="94" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="喉乾いた"/>
+                                                <connections>
+                                                    <action selector="fourth" destination="9xp-mJ-dfV" eventType="touchDown" id="1j7-Kj-ns2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58e-Te-doL">
                                                 <rect key="frame" x="131" y="455" width="152" height="31"/>
@@ -131,19 +143,6 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Jwa-ph-Qkb"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7Jv-VS-QC3"/>
                             </scrollView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrQ-OZ-pYt">
-                                <rect key="frame" x="0.0" y="44" width="413" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="hSD-Cr-9tx">
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="3b2-Uy-OvV">
-                                            <connections>
-                                                <action selector="save" destination="9xp-mJ-dfV" id="WGd-cP-Eio"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zUz-7z-BP0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,6 +153,13 @@
                             <constraint firstItem="qHe-W8-LfY" firstAttribute="leading" secondItem="zUz-7z-BP0" secondAttribute="leading" id="yGn-fQ-vem"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="8b8-76-60z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="1O3-lY-0to">
+                            <connections>
+                                <action selector="save" destination="9xp-mJ-dfV" id="TCv-as-MLy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="imageView" destination="wI8-pC-Gh9" id="tkF-7M-yt0"/>
@@ -173,32 +179,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-yA-HlR">
-                                <rect key="frame" x="81" y="367" width="67" height="31"/>
+                                <rect key="frame" x="59" y="365" width="111" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.90778894229999996" blue="0.96689504380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="お腹すいた"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar9-Nr-dmI">
-                                <rect key="frame" x="250" y="367" width="67" height="31"/>
+                                <rect key="frame" x="220" y="365" width="128" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.90778894229999996" blue="0.96689504380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="軽く食べたい"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlS-Fe-esF">
-                                <rect key="frame" x="81" y="682" width="67" height="31"/>
+                                <rect key="frame" x="33" y="680" width="163" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.90778894229999996" blue="0.96689504380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="冷たいの食べたい"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZT-G1-LMR">
-                                <rect key="frame" x="250" y="682" width="67" height="31"/>
+                                <rect key="frame" x="237" y="680" width="94" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.90778894229999996" blue="0.96689504380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="喉乾いた"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O0U-LB-IhM"/>
