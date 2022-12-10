@@ -10,6 +10,7 @@ import RealmSwift
 class ViewController: UIViewController {
     
    let realm = try! Realm()
+   let syouhin = Syouhin()
     
     @IBOutlet var Button1:UIButton!
 
@@ -19,7 +20,6 @@ class ViewController: UIViewController {
         Button1.layer.cornerRadius = 75
         // Do any additional setup after loading the view.
     }
-
 
 }
 

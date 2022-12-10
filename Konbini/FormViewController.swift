@@ -9,18 +9,28 @@ import UIKit
 import RealmSwift
 class FormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate{
     
-    let realm = try! Realm()
+   //let realm = try! Realm()
     
-    let syouhin = Syouhin()
+    let defaults = UserDefaults.standard
+       var syouhinArray = [Syouhin]()
+       //var image: UIImage!
+    
+//    let syouhin = Syouhin()
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textfild:UITextField!
-    var kibunNumber: Int! = 0
+    @IBOutlet weak var shouhinnametextfild:UITextField!
     var selectdata: NSData? = nil
     @IBAction func save() {
-        //        syouhinArray.name = UITextField.text
-        syouhin.name = textfild.text
-        syouhin.kibun = kibunNumber
-        print(syouhin)
+//        syouhin.name = shouhinnametextfild.text
+//        syouhin.kibun = kibuntextfild.text
+//        print(syouhin)
+        //let data = image.pngData() as NSData?
+                if let imageData = selectdata {
+                    let syouhin = Syouhin(name: shouhinnametextfild.text, gazou: selectdata! as Data, kibun: kibuntextfild.text)
+                    syouhinArray.append(syouhin)
+
+                    //defaults.set(saveArray, forKey: "saveImage")
+                    defaults.synchronize()
+                }
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func selectPicture(_ sender: UIButton) {
@@ -40,29 +50,17 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageView.image = image
         let data = image.pngData()! as NSData
         selectdata = data
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textfild.delegate = self
+        shouhinnametextfild.delegate = self
+        kibuntextfild.delegate = self
         // Do any additional setup after loading the view.
     }
-    @IBAction func first() {
-        kibunNumber = 1
-        print(kibunNumber)
-    }
-    @IBAction func second(){
-        kibunNumber = 2
-        print(kibunNumber)
-    }
-    @IBAction func third(){
-        kibunNumber = 3
-        print(kibunNumber)
-    }
-    @IBAction func fourth(){
-        kibunNumber = 4
-        print(kibunNumber)
-    }
+    @IBOutlet weak var kibuntextfild:UITextField!
+   
     /*
     // MARK: - Navigation
 
