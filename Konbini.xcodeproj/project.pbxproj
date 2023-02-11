@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E2374FF297BEE87007438C7 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2374FE297BEE87007438C7 /* PickerViewController.swift */; };
+		0E237501297BEF68007438C7 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E237500297BEF68007438C7 /* ShowViewController.swift */; };
 		0EA7095A287058B900BFBAF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA70959287058B900BFBAF4 /* AppDelegate.swift */; };
 		0EA7095C287058B900BFBAF4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7095B287058B900BFBAF4 /* SceneDelegate.swift */; };
 		0EA7095E287058B900BFBAF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA7095D287058B900BFBAF4 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E2374FE297BEE87007438C7 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		0E237500297BEF68007438C7 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		0EA70956287058B900BFBAF4 /* Konbini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Konbini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA70959287058B900BFBAF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EA7095B287058B900BFBAF4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				0EA70967287058BE00BFBAF4 /* Info.plist */,
 				0EDB409A288C00C700402D6B /* FormViewController.swift */,
 				0EDB409C2895363D00402D6B /* Konbini.swift */,
+				0E2374FE297BEE87007438C7 /* PickerViewController.swift */,
+				0E237500297BEF68007438C7 /* ShowViewController.swift */,
 			);
 			path = Konbini;
 			sourceTree = "<group>";
@@ -94,7 +100,6 @@
 				C7EBC10C6BA6D168207C399B /* Pods-Konbini.debug.xcconfig */,
 				30C488A457B3BF5F11A02BA6 /* Pods-Konbini.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2374FF297BEE87007438C7 /* PickerViewController.swift in Sources */,
+				0E237501297BEF68007438C7 /* ShowViewController.swift in Sources */,
 				0EA7095E287058B900BFBAF4 /* ViewController.swift in Sources */,
 				0EA7095A287058B900BFBAF4 /* AppDelegate.swift in Sources */,
 				0EDB409B288C00C700402D6B /* FormViewController.swift in Sources */,
