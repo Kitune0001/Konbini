@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        Button1.layer.cornerRadius = 75
+      
         // Do any additional setup after loading the view.
     }
 

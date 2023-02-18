@@ -9,30 +9,55 @@ import UIKit
 import RealmSwift
 class FormViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate{
     
-   //let realm = try! Realm()
-    
-    let defaults = UserDefaults.standard
-       var syouhinArray = [Syouhin]()
-       //var image: UIImage!
-    
-//    let syouhin = Syouhin()
+   
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var shouhinnametextfild:UITextField!
+    @IBOutlet weak var textfild:UITextField!
+    @IBOutlet weak var kibuntextfild:UITextField!
+    
+    let realm = try! Realm()
+     
+    let syouhin = Syouhin()
+        
+    var kibun : String!
+    var name : String!
+    var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     var selectdata: NSData? = nil
-    @IBAction func save() {
-//        syouhin.name = shouhinnametextfild.text
-//        syouhin.kibun = kibuntextfild.text
-//        print(syouhin)
-        //let data = image.pngData() as NSData?
-                if let imageData = selectdata {
-                    let syouhin = Syouhin(name: shouhinnametextfild.text, gazou: selectdata! as Data, kibun: kibuntextfild.text)
-                    syouhinArray.append(syouhin)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textfild.delegate = self
+        kibuntextfild.delegate = self
+        // Do any additional setup after loading the view.
+    }
 
-                    //defaults.set(saveArray, forKey: "saveImage")
-                    defaults.synchronize()
-                }
+    @IBAction func save() {
+        name = textfild.text
+        kibun = kibuntextfild.text
+        if name == "" || kibun == ""{
+            let alert = UIAlertController(title: "No name", message: "Please insert the name", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+        }else{
+            saveImage()
+            syouhin.name = name
+            syouhin.kibun = kibun
+            do {
+                try syouhin.filename = directoryFileURL.absoluteString
+            }catch{
+                let alert = UIAlertController(title: "Cannot Save the Image", message: "", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default)
+                alert.addAction(ok)
+                present(alert, animated: true, completion: nil)
+            }
+            
+            try! realm.write{
+                realm.add(syouhin)
+            }
+        }
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func selectPicture(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let pickerView = UIImagePickerController()
@@ -53,13 +78,30 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        shouhinnametextfild.delegate = self
-        kibuntextfild.delegate = self
-        // Do any additional setup after loading the view.
+    func saveImage () {
+        createLocalDataFile()
+        
+        let pngImageData = imageView.image?.pngData()
+        do {
+            try pngImageData!.write(to: directoryFileURL)
+        } catch {
+            
+            print("エラー")
+        }
     }
-    @IBOutlet weak var kibuntextfild:UITextField!
+    func createLocalDataFile() {
+        
+        let fileName = "\(NSUUID().uuidString).png"
+        
+        if directoryFileURL != nil{
+            
+            let path = directoryFileURL.appendingPathComponent(fileName)
+            directoryFileURL = path
+        }
+    }
+    
+   
+    
    
     /*
     // MARK: - Navigation

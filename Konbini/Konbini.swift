@@ -8,11 +8,13 @@
 import UIKit
 import RealmSwift
 
-struct Syouhin: Codable {
+
+class Syouhin: Object {
     
-    var name: String!
-    var gazou: Data!
-    var kibun: String!
+    @objc dynamic var name: String!
+    @objc dynamic var gazou: Data!
+    @objc dynamic var kibun: String!
+    @objc dynamic var filename: String!
   
 
 }
