@@ -17,7 +17,11 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     let realm = try! Realm()
      
     let syouhin = Syouhin()
-        
+    
+    
+    
+    
+    
     var kibun : String!
     var name : String!
     var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -42,6 +46,8 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             saveImage()
             syouhin.name = name
             syouhin.kibun = kibun
+            //Kibunhairetu = kibun
+           
             do {
                 try syouhin.filename = directoryFileURL.absoluteString
             }catch{
@@ -53,6 +59,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             
             try! realm.write{
                 realm.add(syouhin)
+                
             }
         }
         self.navigationController?.popViewController(animated: true)

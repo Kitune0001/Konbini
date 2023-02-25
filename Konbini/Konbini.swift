@@ -12,9 +12,10 @@ import RealmSwift
 class Syouhin: Object {
     
     @objc dynamic var name: String!
-    @objc dynamic var gazou: Data!
+    //@objc dynamic var gazou: Data!
     @objc dynamic var kibun: String!
     @objc dynamic var filename: String!
   
 
 }
+

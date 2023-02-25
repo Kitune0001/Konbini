@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RealmSwift
+
  
 class PickerViewController: UIViewController , UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -19,11 +21,14 @@ class PickerViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
         "お腹すいた","喉乾いた","眠気打破","小腹満たし",
         
     ]
-    
+    let realm = try! Realm()
+    var karikibunList :Set<String>!
+    var kibunList : [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         karikibunList = Set(realm.objects(Syouhin.self).value(forKey: "kibun") as! [String])
+        kibunList = Array(karikibunList).sorted()
         
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -40,7 +45,7 @@ class PickerViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
-        return dataList.count
+        return kibunList.count
     }
     
     
@@ -48,7 +53,7 @@ class PickerViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
-        return dataList[row]
+        return kibunList[row]
     }
     
    
@@ -56,9 +61,9 @@ class PickerViewController: UIViewController , UIPickerViewDelegate, UIPickerVie
                     didSelectRow row: Int,
                     inComponent component: Int) {
         
-        label.text = dataList[row]
+        label.text = kibunList[row]
       
-        Kibun = dataList[row]
+        Kibun = kibunList[row]
         print(Kibun)
         
         

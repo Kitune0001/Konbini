@@ -31,7 +31,7 @@ class ShowViewController: UIViewController {
         let findSyouhin = realm.objects(Syouhin.self).filter("kibun == %@", Kibun!)
     
         
-        let fileURL = URL(string: findSyouhin[0].filename)
+        let fileURL = URL(string: (findSyouhin.randomElement()?.filename)!)
         
         let filePath = fileURL?.path
         
