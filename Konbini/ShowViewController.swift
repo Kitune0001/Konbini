@@ -26,25 +26,28 @@ class ShowViewController: UIViewController {
     
     func Load(){
         let syouhin = realm.objects(Syouhin.self)
-      
+        print(syouhin)
         
         let findSyouhin = realm.objects(Syouhin.self).filter("kibun == %@", Kibun!)
-    
-        
-        let fileURL = URL(string: (findSyouhin.randomElement()?.filename)!)
-        
+        print(findSyouhin)
+        let showsyouhin = findSyouhin.randomElement()
+        let fileURL = URL(string: (showsyouhin?.filename)!)
+        //let fileURL = URL(string: (findSyouhin[0].filename!))
+        print(fileURL)
         let filePath = fileURL?.path
-        
+        print(filePath)
         
         if FileManager.default.fileExists(atPath: filePath!){
             
             if let imageData = UIImage(contentsOfFile: filePath!) {
                 syouhingazou.image = imageData
             } else {
-                
+                print("エラー")
             }
+        } else {
+            print("エラー")
         }
-        label.text = findSyouhin[0].name
+        label.text = showsyouhin?.name
     }
 
     /*

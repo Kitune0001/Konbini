@@ -27,6 +27,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     var selectdata: NSData? = nil
+    var fileName: String!
     override func viewDidLoad() {
         super.viewDidLoad()
         textfild.delegate = self
@@ -49,7 +50,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             //Kibunhairetu = kibun
            
             do {
-                try syouhin.filename = directoryFileURL.absoluteString
+                try syouhin.filename = fileName
             }catch{
                 let alert = UIAlertController(title: "Cannot Save the Image", message: "", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "OK", style: .default)
