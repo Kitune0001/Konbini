@@ -99,7 +99,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     func createLocalDataFile() {
         
-        let fileName = "\(NSUUID().uuidString).png"
+         fileName = "\(NSUUID().uuidString).png"
         
         if directoryFileURL != nil{
             

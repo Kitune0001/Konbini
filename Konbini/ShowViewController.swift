@@ -13,7 +13,7 @@ class ShowViewController: UIViewController {
     @IBOutlet var syouhingazou: UIImageView!
     let realm = try! Realm()
     var Kibun:String!
-    
+    var directoryFileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     var syouhinname: String!
     
     override func viewDidLoad() {
@@ -31,15 +31,15 @@ class ShowViewController: UIViewController {
         let findSyouhin = realm.objects(Syouhin.self).filter("kibun == %@", Kibun!)
         print(findSyouhin)
         let showsyouhin = findSyouhin.randomElement()
-        let fileURL = URL(string: (showsyouhin?.filename)!)
-        //let fileURL = URL(string: (findSyouhin[0].filename!))
+        let fileURL = directoryFileURL.appendingPathComponent((showsyouhin?.filename)!)
+       
         print(fileURL)
-        let filePath = fileURL?.path
+        let filePath = fileURL.path
         print(filePath)
         
-        if FileManager.default.fileExists(atPath: filePath!){
+        if FileManager.default.fileExists(atPath: filePath){
             
-            if let imageData = UIImage(contentsOfFile: filePath!) {
+            if let imageData = UIImage(contentsOfFile: filePath) {
                 syouhingazou.image = imageData
             } else {
                 print("エラー")
