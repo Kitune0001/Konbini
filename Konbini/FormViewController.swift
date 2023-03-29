@@ -32,6 +32,9 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         textfild.delegate = self
         kibuntextfild.delegate = self
+        textfild.setUnderLine()
+        kibuntextfild.setUnderLine()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -121,4 +124,19 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     */
 
+}
+
+extension UITextField {
+    func setUnderLine() {
+        // 枠線を非表示にする
+        borderStyle = .none
+        let underline = UIView()
+        // heightにはアンダーラインの高さを入れる
+        underline.frame = CGRect(x: 0, y: frame.height, width: frame.width, height: 3.5)
+        // 枠線の色
+        underline.backgroundColor = .white
+        addSubview(underline)
+        // 枠線を最前面に
+        bringSubviewToFront(underline)
+    }
 }
