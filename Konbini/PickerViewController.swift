@@ -92,8 +92,8 @@ extension PickerViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let pickerLabel = UILabel()
-        pickerLabel.textColor = #colorLiteral(red: 0.6829224825, green: 0.6091368198, blue: 0.9736139178, alpha: 1)
-        pickerLabel.text = self.dataList[row]
+        pickerLabel.textColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        pickerLabel.text = kibunList[row]
         pickerLabel.font = UIFont(name: "Helvetica", size: 22)
         pickerLabel.textAlignment = NSTextAlignment.center
         
