@@ -9,6 +9,8 @@ import UIKit
 import RealmSwift
 
 
+
+
 class Syouhin: Object {
     
     @objc dynamic var name: String!

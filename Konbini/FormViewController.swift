@@ -32,6 +32,10 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         textfild.delegate = self
         kibuntextfild.delegate = self
+        textfild.attributedPlaceholder = NSAttributedString(string: "商品名",
+                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        kibuntextfild.attributedPlaceholder = NSAttributedString(string: "商品名",
+                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         textfild.setUnderLine()
         kibuntextfild.setUnderLine()
         
@@ -138,5 +142,7 @@ extension UITextField {
         addSubview(underline)
         // 枠線を最前面に
         bringSubviewToFront(underline)
+        
+   
     }
 }

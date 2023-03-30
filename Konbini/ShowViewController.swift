@@ -50,6 +50,10 @@ class ShowViewController: UIViewController {
         label.text = showsyouhin?.name
     }
 
+    @IBAction func closeAllViewController(_ sender: Any) {
+            self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+            self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        }
     /*
     // MARK: - Navigation
 
