@@ -34,7 +34,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         kibuntextfild.delegate = self
         textfild.attributedPlaceholder = NSAttributedString(string: "商品名",
                                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        kibuntextfild.attributedPlaceholder = NSAttributedString(string: "商品名",
+        kibuntextfild.attributedPlaceholder = NSAttributedString(string: "今の気分は？",
                                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         textfild.setUnderLine()
         kibuntextfild.setUnderLine()

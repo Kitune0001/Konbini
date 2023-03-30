@@ -151,7 +151,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="次へ">
+                                <buttonConfiguration key="configuration" style="plain" title="→">
                                     <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -199,7 +199,7 @@
                     <navigationItem key="navigationItem" id="G5h-ef-jbH">
                         <barButtonItem key="rightBarButtonItem" title="Home" id="hRy-f0-qzl">
                             <connections>
-                                <action selector="closeAllViewController:" destination="ajZ-4r-Uhb" id="kVg-38-Xtx"/>
+                                <action selector="home" destination="ajZ-4r-Uhb" id="hGH-j9-gz7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

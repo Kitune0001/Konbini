@@ -9,11 +9,6 @@ import UIKit
 import RealmSwift
 class ViewController: UIViewController {
     
-    
-    @IBAction func unwindSegue(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
-       }
-
-    
    let realm = try! Realm()
    let syouhin = Syouhin()
     
