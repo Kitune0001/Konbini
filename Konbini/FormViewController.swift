@@ -38,7 +38,7 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         textfild.setUnderLine()
         kibuntextfild.setUnderLine()
-        
+        kibuntextfild.isHidden = true
         // Do any additional setup after loading the view.
     }
 
@@ -72,7 +72,22 @@ class FormViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         self.navigationController?.popViewController(animated: true)
     }
-    
+    @IBAction func food(){
+        kibun = "ご飯"
+        
+    }
+    @IBAction func drink(){
+        
+        kibun = "飲み物"
+    }
+    @IBAction func like(){
+        
+        kibun = "お気に入り"
+    }
+    @IBAction func etc(){
+        
+        kibuntextfild.isHidden = false
+    }
     @IBAction func selectPicture(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let pickerView = UIImagePickerController()
